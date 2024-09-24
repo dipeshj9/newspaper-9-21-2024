@@ -119,7 +119,7 @@ class PostListView(ListView):
     queryset = Post.objects.filter(
         status="active", published_at__isnull=False
     ).order_by("-published_at")
-    paginate_by = 1
+    paginate_by = 2
 
 
 class PostDetailView(DetailView):
